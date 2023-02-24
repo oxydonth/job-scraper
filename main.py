@@ -10,10 +10,16 @@ import warnings
 
 # Import packages for manipulating data and searching the web
 from bs4 import BeautifulSoup
-from selenium import webdriver
 from time import sleep
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.options import Options as Firefox_Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions as EC
 
 try:
     from urllib.parse import urlparse
@@ -255,7 +261,7 @@ pathname = os.path.dirname(sys.argv[0])
 errormessage = []
 keywordfile = pathname+"/keywords.txt"
 locationfile = pathname+"/locations.txt"
-gdpath = pathname+"/geckodriver"
+gdpath = "/usr/bin/geckodriver"
 
 if keywordfile is None:
     errormessage.append("No keyword file given.")
@@ -301,20 +307,17 @@ os.chdir(pathname)
 if not os.path.isdir("output/indeed"):
     os.mkdir("output/indeed")
 
-# Same for the cleaned content
+# Same for the cleaned contentecho
 if not os.path.isdir("output/indeed/cleaned"):
     os.mkdir("output/indeed/cleaned")
 
 # Log path for a log of the data
 logpath = "output/indeed/driver_cities.log"
 
-options = Options()
-options.binary = FirefoxBinary('/usr/bin/firefox')
-options.set_preference("browser.download.folderList",2)
-options.set_preference("browser.download.manager.showWhenStarting", False)
-options.set_preference("browser.download.dir","/Data")
-options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream,application/vnd.ms-excel")
-driver = webdriver.Firefox(executable_path=gdpath, options=options)
+firefox_options = Firefox_Options()
+driverService = Service(gdpath)
+firefox_options.binary_location="/usr/bin/firefox"
+driver = webdriver.Firefox(service=driverService, options=firefox_options)
 
 # Loop through the list of cities and obtain information.
 with open("output/indeed/cities.csv", "w") as csvfile:
