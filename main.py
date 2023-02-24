@@ -12,6 +12,8 @@ import warnings
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from time import sleep
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 try:
     from urllib.parse import urlparse
@@ -306,8 +308,13 @@ if not os.path.isdir("output/indeed/cleaned"):
 # Log path for a log of the data
 logpath = "output/indeed/driver_cities.log"
 
-# Open the driver browser and set the log to which we print messages about the process
-driver = webdriver.Firefox(executable_path = gdpath)
+options = Options()
+options.binary = FirefoxBinary('/usr/bin/firefox')
+options.set_preference("browser.download.folderList",2)
+options.set_preference("browser.download.manager.showWhenStarting", False)
+options.set_preference("browser.download.dir","/Data")
+options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream,application/vnd.ms-excel")
+driver = webdriver.Firefox(executable_path=gdpath, options=options)
 
 # Loop through the list of cities and obtain information.
 with open("output/indeed/cities.csv", "w") as csvfile:
