@@ -184,7 +184,7 @@ def get_urls(baseurl, query, num_pages, location):
         # Start loop from page 2 since page 1 has been dealt with above.
         for i in range(2, num_pages+1):
             num = (i-1) * 10
-            baseurl = "https://indeed.com/jobs?q={}&l={}&radius={}&start={}".format(query, location, radius, num)
+            baseurl = "https://indeed.de/jobs?q={}&l={}&radius={}&start={}".format(query, location, radius, num)
             try:
                 soup = get_soup(baseurl)
                 urls += grab_job_links(soup)
@@ -202,7 +202,7 @@ def grab_job_links(soup):
     removealert()
     for link in soup.find_all("h2", {"class" : "jobtitle turnstileLink"}):
         partial_url = link.a.get("href")
-        url = "https://indeed.com" + partial_url
+        url = "https://indeed.de" + partial_url
         urls.append(url)
     return urls
 
@@ -314,10 +314,14 @@ if not os.path.isdir("output/indeed/cleaned"):
 # Log path for a log of the data
 logpath = "output/indeed/driver_cities.log"
 
-firefox_options = Firefox_Options()
+options = Firefox_Options()
 driverService = Service(gdpath)
-firefox_options.binary_location="/usr/bin/firefox"
-driver = webdriver.Firefox(service=driverService, options=firefox_options)
+options.set_preference("browser.download.folderList",2)
+options.set_preference("browser.download.manager.showWhenStarting", False)
+options.set_preference("browser.download.dir","/Data")
+options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream,application/vnd.ms-excel")
+options.binary_location="/home/deck/firefox-esr/firefox"
+driver = webdriver.Firefox(service=driverService, options=options)
 
 # Loop through the list of cities and obtain information.
 with open("output/indeed/cities.csv", "w") as csvfile:
@@ -325,6 +329,6 @@ with open("output/indeed/cities.csv", "w") as csvfile:
         for kw in keywords: # For each keyword
             csvwriter = csv.writer(csvfile)
             removealert() # Check for jobalert to remove.
-            baseurl = "https://www.indeed.com/jobs?q=" + str(kw.replace(" ", "+")) + "&l=" + str(l) + "&radius=" + str(radius)
+            baseurl = "https://www.indeed.de/jobs?q=" + str(kw.replace(" ", "+")) + "&l=" + str(l) + "&radius=" + str(radius)
             removealert()
             get_data(baseurl, kw, limit, l)
