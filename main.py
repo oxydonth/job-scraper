@@ -115,22 +115,21 @@ def get_data(baseurl, query, num_pages, location):
     postings_dict = {}
     urls = get_urls(baseurl, query, num_pages, location)
     removealert()
-    # Continue only if the requested number of pages is valid (when invalid, a number is returned instead of list).
-    if isinstance(urls, list):
-        num_urls = len(urls) # Get the number of urls.
-        for i, url in enumerate(urls):
-            df = get_info(url)
-            postings_dict[i] = df.to_dict("dict")
-            percent = (i+1) / num_urls
-        # Save the dictionary as json file.
-        file_name = query.replace("+", "_") + ".json"
-        with open("output/indeed/" + file_name, "w") as f:
-            json.dump(postings_dict, f)
-            for key, value in postings_dict.items():
-                csvwriter.writerow([key, value])
-        print("All {} postings for {} in {} have been scraped and saved!".format(num_urls, query.replace("+", " "), location))
-    else:
-        print("Due to similar results, maximum number of pages is only {}. Please try again!".format(urls))
+    data = []
+    for url in urls:
+        try:            
+            data.append(grab_job_data_and_direct_apply_link(url))
+        except:
+            continue
+    removealert()    
+
+    # Save the dictionary as json file.
+    file_name = query.replace("+", "_") + ".json"
+    with open("output/indeed/" + file_name, "w") as f:
+        json.dump(data, f)
+    with open("output/indeed/" + file_name, "r") as fi:
+        df = pd.read_json(fi)
+        df.to_csv(csvfile)
 
 def get_info(url):
     """
@@ -151,7 +150,7 @@ def get_soup(url):
     Given the url of a page, this function returns the soup object.
     """
     driver.get(url) # Go to the url in Firefox.
-    sleep(10) # Wait for the page to load.
+    sleep(2) # Wait for the page to load.
     html = driver.page_source # Extract the page source.
     soup = BeautifulSoup(html, "html.parser") # Soup it.
     return soup
@@ -163,29 +162,80 @@ def get_urls(baseurl, query, num_pages, location):
     removealert()
     # Get the first page.
     soup = get_soup(baseurl)
-    urls = grab_job_links(soup)
+    urls = grab_job_title_links(soup)
     # Get the total number of postings found.
     posting_count = urls.count    
-    removealert()    
-    for url in urls:
-        try:
-            soup = get_soup(url)
-            urls += grab_job_links(soup)
-        except:
-            continue
     removealert()
     return urls
 
-def grab_job_links(soup):
+def grab_job_data_and_direct_apply_link(url):
+    data = {}
+    data["url"] = url
+    data["directapply"] = ""
+    data["salary"] = ""
+    data["jobtitle"] = ""
+    data["jobopeningdate"] = ""
+    data["contractduration"] = ""
+    data["company"] = ""
+    data["city"] = ""
+    soup = get_soup(url)
+    
+    for link in soup.find_all("a", {"class" : "css-v0a1gu e8ju0x50"}):
+        if(link!= None):
+            url = link.get("href")
+            data["directapply"] = url
+
+    for salary in soup.find_all("span", {"class": "css-2iqe2o eu4oa1w0"}):
+        if(salary!= None):
+            data["salary"] = salary.get_text()
+
+    for jobtitle in soup.find_all("h1", {"class": "jobsearch-JobInfoHeader-title"}):
+        if(jobtitle!= None):
+            for span in jobtitle:                
+                if(span!= None):
+                    data["jobtitle"] = span.get_text()
+
+    for companydiv in soup.find_all("div", {"class": "jobsearch-DesktopStickyContainer-companyrating"}):
+        if(companydiv!= None):
+            divs = companydiv.find_all("div", {"class": ""})
+            data["company"] = divs[0].get_text()
+            
+    for jobopeningdate in soup.find_all("span", {"class": "css-kyg8or eu4oa1w0"}):
+        if(jobopeningdate!= None):
+            data["jobopeningdate"] = extract_jobopeningduration_int(jobopeningdate.get_text())
+
+    for contractdurationdiv in soup.find_all("div", {"class": "css-rr5fiy eu4oa1w0"}):
+        if(contractdurationdiv!= None):
+            for contractduration in contractdurationdiv.find_all("div", {"class": ""}):
+                data["contractduration"] = contractduration.get_text()
+
+    for citydivs in soup.find_all("div", {"class": "icl-u-xs-mt--xs icl-u-textColor--secondary jobsearch-JobInfoHeader-subtitle jobsearch-DesktopStickyContainer-subtitle"}):
+        if(citydivs != None):
+            citydiv = citydivs.findAll("div", {"class": ""})
+            data["city"] = citydiv[3].get_text()
+                
+
+    return data
+
+def extract_jobopeningduration_int(text):
+    if (text != None):
+        splid = text.split()
+        for content in splid:
+            if (content.isdigit()):
+                return content
+    return ""
+
+def grab_job_title_links(soup):
     """
     Grab all non-sponsored job posting links from a Indeed search result
     page using the given soup object.
     """
     urls = []    
     removealert()    
-    for link in soup.find_all("a", {"class" : "css-v0a1gu e8ju0x50"}):
+    for link in soup.find_all("a", {"class" : "jcs-JobTitle"}):
         if(link!= None):
-            url = link.get("href")            
+            partial_url = link.get("href")
+            url = "https://indeed.de" + partial_url
             urls.append(url)
     return urls
 
@@ -299,10 +349,6 @@ logpath = "output/indeed/driver_cities.log"
 
 options = Firefox_Options()
 driverService = Service(gdpath)
-options.set_preference("browser.download.folderList",2)
-options.set_preference("browser.download.manager.showWhenStarting", False)
-options.set_preference("browser.download.dir","/Data")
-options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/octet-stream,application/vnd.ms-excel")
 options.binary_location="/home/deck/firefox-esr/firefox"
 driver = webdriver.Firefox(service=driverService, options=options)
 
