@@ -179,7 +179,7 @@ def grab_job_data_and_direct_apply_link(url):
     data["company"] = ""
     data["city"] = ""
     soup = get_soup(url)
-    
+
     for link in soup.find_all("a", {"class" : "css-v0a1gu e8ju0x50"}):
         if(link!= None):
             url = link.get("href")
@@ -220,7 +220,7 @@ def grab_job_data_and_direct_apply_link(url):
 def extract_jobopeningduration_int(text):
     if (text != None):
         splid = text.split()
-        for content in splid:
+        for content in splid:icl-u-xs-mt--xs icl-u-textColor--secondary jobsearch-JobInfoHeader-subtitle jobsearch-DesktopStickyContainer-subtitle
             if (content.isdigit()):
                 return content
     return ""
