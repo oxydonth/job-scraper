@@ -165,31 +165,14 @@ def get_urls(baseurl, query, num_pages, location):
     soup = get_soup(baseurl)
     urls = grab_job_links(soup)
     # Get the total number of postings found.
-    posting_count_string = soup.find(name="div", attrs={"id" :"searchCount"}).get_text()
-    posting_count_string = posting_count_string[posting_count_string.find("of")+2:].strip()
-    removealert()
-    try:
-        posting_count = int(posting_count_string)
-    except ValueError: # deal with special case when parsed string is "360 jobs"
-        posting_count = int(re.search("\d+", posting_count_string).group(0))
-    finally:
-        posting_count = 330 # setting to 330 when unable to get the total
-        pass
-    # Limit number of pages to get.
-    max_pages = round(posting_count / 10) - 3
-    removealert()
-    if num_pages > max_pages:
-        return max_pages
-    if num_pages >= 2:
-        # Start loop from page 2 since page 1 has been dealt with above.
-        for i in range(2, num_pages+1):
-            num = (i-1) * 10
-            baseurl = "https://indeed.de/jobs?q={}&l={}&radius={}&start={}".format(query, location, radius, num)
-            try:
-                soup = get_soup(baseurl)
-                urls += grab_job_links(soup)
-            except:
-                continue
+    posting_count = urls.count    
+    removealert()    
+    for url in urls:
+        try:
+            soup = get_soup(url)
+            urls += grab_job_links(soup)
+        except:
+            continue
     removealert()
     return urls
 
@@ -198,12 +181,12 @@ def grab_job_links(soup):
     Grab all non-sponsored job posting links from a Indeed search result
     page using the given soup object.
     """
-    urls = []
-    removealert()
-    for link in soup.find_all("h2", {"class" : "jobtitle turnstileLink"}):
-        partial_url = link.a.get("href")
-        url = "https://indeed.de" + partial_url
-        urls.append(url)
+    urls = []    
+    removealert()    
+    for link in soup.find_all("a", {"class" : "css-v0a1gu e8ju0x50"}):
+        if(link!= None):
+            url = link.get("href")            
+            urls.append(url)
     return urls
 
 def removealert():
