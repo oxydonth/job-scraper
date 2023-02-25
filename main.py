@@ -220,7 +220,7 @@ def grab_job_data_and_direct_apply_link(url):
 def extract_jobopeningduration_int(text):
     if (text != None):
         splid = text.split()
-        for content in splid:icl-u-xs-mt--xs icl-u-textColor--secondary jobsearch-JobInfoHeader-subtitle jobsearch-DesktopStickyContainer-subtitle
+        for content in splid:
             if (content.isdigit()):
                 return content
     return ""

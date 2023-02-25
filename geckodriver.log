@@ -1596,3 +1596,17 @@ JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
+1677334292505	geckodriver	INFO	Listening on 127.0.0.1:44291
+1677334292516	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "56201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJCBnR2"
+Gtk-Message: 15:11:32.560: Failed to load module "canberra-gtk-module"
+Gtk-Message: 15:11:32.646: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 15:11:32.647: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677334293390	Marionette	INFO	Marionette enabled
+1677334293396	Marionette	INFO	Listening on port 33521
+WebDriver BiDi listening on ws://localhost:56201
+Read port: 33521
+1677334293597	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJCBnR2/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56201/devtools/browser/3f341641-9f47-42a0-bb77-ba195dfdfff2
