@@ -11,6 +11,7 @@ import warnings
 # Import packages for manipulating data and searching the web
 from bs4 import BeautifulSoup
 from time import sleep
+from string import digits
 
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
@@ -212,10 +213,15 @@ def grab_job_data_and_direct_apply_link(url):
     for citydivs in soup.find_all("div", {"class": "icl-u-xs-mt--xs icl-u-textColor--secondary jobsearch-JobInfoHeader-subtitle jobsearch-DesktopStickyContainer-subtitle"}):
         if(citydivs != None):
             citydiv = citydivs.findAll("div", {"class": ""})
-            data["city"] = citydiv[3].get_text()
-                
+            data["city"] = clean_city_of_plz(citydiv[3].get_text())                
 
     return data
+
+def clean_city_of_plz(city):
+    if (city == None or city == ""):
+        return ""
+    else:
+        return city.translate({ord(k): None for k in digits})
 
 def extract_jobopeningduration_int(text):
     if (text != None):
@@ -285,9 +291,9 @@ for i, j in enumerate(args):
         gdpath = args[i+1]
 
 if radius is None: # Set default radius value to 0
-    radius = 0
+    radius = 25
 if limit is None: # Set default limit value to 10
-    limit = 10
+    limit = 100
 
 pathname = os.path.dirname(sys.argv[0])
 
