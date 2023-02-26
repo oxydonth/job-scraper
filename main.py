@@ -107,19 +107,26 @@ def extract_summary_from_result(soup):
         summaries.append(span.text.strip())
     return(summaries)
 
-def get_data(baseurl, query, num_pages, location):
+def get_data(query, num_pages, location, radius, portaltype):
     """
     Get all the job posting data and save in a json file using below structure:
     {<count>: {"title": ..., "posting":..., "url":...}...}
     """
+    if (portaltype == "indeed"):
+        baseurl = "https://www.indeed.de/jobs?q=" + str(query.replace(" ", "+")) + "&l=" + str(l) + "&radius=" + str(radius)
+    elif (portaltype == "monster"):        
+        baseurl = "https://www.monster.de/jobs/suche?q=" + str(query.replace(" ", "+")) + "&where=" + str(l) + "&radius=" + str(radius)
     # Convert the queried title to Indeed format.
     postings_dict = {}
-    urls = get_urls(baseurl, query, num_pages, location)
+    urls = get_urls(baseurl, query, num_pages, location, portaltype)
     removealert()
     data = []
     for url in urls:
-        try:            
-            data.append(grab_job_data_and_direct_apply_link(url))
+        try:
+            if(portaltype == "monster"):
+                data.append(grab_job_data_and_direct_apply_link_monster(url))
+            elif (portaltype == "indeed"):
+                data.append(grab_job_data_and_direct_apply_link_indeed(url))
         except:
             continue
     removealert()    
@@ -156,20 +163,68 @@ def get_soup(url):
     soup = BeautifulSoup(html, "html.parser") # Soup it.
     return soup
 
-def get_urls(baseurl, query, num_pages, location):
+def get_urls(baseurl, query, num_pages, location, portaltype):
     """
     Get all the job posting URLs resulted from a specific search.
     """
     removealert()
     # Get the first page.
     soup = get_soup(baseurl)
-    urls = grab_job_title_links(soup)
+    if (portaltype == "indeed"):
+        urls = grab_job_title_links_indeed(soup)
+    elif (portaltype == "monster"):
+        urls = grab_job_title_links_monster(soup)
     # Get the total number of postings found.
     posting_count = urls.count    
     removealert()
     return urls
 
-def grab_job_data_and_direct_apply_link(url):
+def grab_job_data_and_direct_apply_link_monster(url):
+    data = {}
+    data["url"] = url
+    data["directapply"] = ""
+    data["salary"] = ""
+    data["jobtitle"] = ""
+    data["jobopeningdate"] = ""
+    data["contractduration"] = ""
+    data["company"] = ""
+    data["city"] = ""
+    soup = get_soup(url)
+
+    for link in soup.find_all("a", {"class" : "css-v0a1gu e8ju0x50"}):
+        if(link!= None):
+            url = link.get("href")
+            data["directapply"] = url
+
+    for salary in soup.find_all("span", {"class": "salarystyle__SalaryBody-sc-1kub5et-8 jMItLl"}):
+        if(salary!= None):
+            data["salary"] = salary.get_text()
+
+    for jobtitle in soup.find_all("h1", {"class": "headerstyle__JobViewHeaderTitle-sc-1ijq9nh-5 dODNfv JobViewTitle"}):
+        if(jobtitle!= None):
+            data["jobtitle"] = jobtitle.get_text()
+
+    for company in soup.find_all("h2", {"class": "headerstyle__JobViewHeaderCompany-sc-1ijq9nh-6 dbZDiR"}):
+        data["company"] = company.get_text()
+            
+    for jobopeningdate in soup.find_all("div", {"class": "detailsstyles__DetailsTableDetailPostedBody-sc-1deoovj-6 gmYLjn"}):
+        if(jobopeningdate!= None):
+            data["jobopeningdate"] = extract_jobopeningduration_int(jobopeningdate.get_text())
+
+    i = 0
+
+    for contractduration in soup.find_all("div", {"class": "detailsstyles__DetailsTableDetailBody-sc-1deoovj-5 eyvZUJ"}):
+        if (i == 0):
+            data["contractduration"] = contractduration.get_text()
+        if (i == 1):
+            data["city"] = clean_city_of_plz(contractduration.get_text())
+        if (i > 2):
+            break
+        i = i+1    
+
+    return data
+
+def grab_job_data_and_direct_apply_link_indeed(url):
     data = {}
     data["url"] = url
     data["directapply"] = ""
@@ -231,7 +286,7 @@ def extract_jobopeningduration_int(text):
                 return content
     return ""
 
-def grab_job_title_links(soup):
+def grab_job_title_links_indeed(soup):
     """
     Grab all non-sponsored job posting links from a Indeed search result
     page using the given soup object.
@@ -242,6 +297,20 @@ def grab_job_title_links(soup):
         if(link!= None):
             partial_url = link.get("href")
             url = "https://indeed.de" + partial_url
+            urls.append(url)
+    return urls
+
+def grab_job_title_links_monster(soup):
+    """
+    Grab all non-sponsored job posting links from a Indeed search result
+    page using the given soup object.
+    """
+    urls = []    
+    removealert()    
+    for link in soup.find_all("a", {"class" : "job-cardstyle__JobCardTitle-sc-1mbmxes-2 iQztVR"}):
+        if(link!= None):
+            partial_url = link.get("href")
+            url = "https:" + partial_url
             urls.append(url)
     return urls
 
@@ -363,7 +432,6 @@ with open("output/indeed/cities.csv", "w") as csvfile:
     for l in locations: # For each locations in the list
         for kw in keywords: # For each keyword
             csvwriter = csv.writer(csvfile)
-            removealert() # Check for jobalert to remove.
-            baseurl = "https://www.indeed.de/jobs?q=" + str(kw.replace(" ", "+")) + "&l=" + str(l) + "&radius=" + str(radius)
-            removealert()
-            get_data(baseurl, kw, limit, l)
+            removealert() # Check for jobalert to remove.                        
+            get_data(kw, limit, l, radius, "monster")
+            get_data(kw, limit, l, radius, "indeed")

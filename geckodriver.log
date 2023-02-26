@@ -1817,3 +1817,418 @@ JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
+1677411311541	Marionette	INFO	Stopped listening on port 40149
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1677411507814	geckodriver	INFO	Listening on 127.0.0.1:51791
+1677411507825	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "43369" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileXBHsv0"
+Gtk-Message: 12:38:27.870: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:38:27.955: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:38:27.955: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411508739	Marionette	INFO	Marionette enabled
+1677411508745	Marionette	INFO	Listening on port 37431
+WebDriver BiDi listening on ws://localhost:43369
+Read port: 37431
+1677411508919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileXBHsv0/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:43369/devtools/browser/9a109eec-ab69-4d4e-8856-555808d5d5f7
+1677411571508	geckodriver	INFO	Listening on 127.0.0.1:33289
+1677411571522	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "51095" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCDHdnD"
+Gtk-Message: 12:39:31.564: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:39:31.650: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:39:31.650: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411572400	Marionette	INFO	Marionette enabled
+1677411572407	Marionette	INFO	Listening on port 44305
+WebDriver BiDi listening on ws://localhost:51095
+Read port: 44305
+1677411572619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCDHdnD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51095/devtools/browser/ca43135d-9f4e-44b5-96db-45038aa5569e
+1677411586631	geckodriver	INFO	Listening on 127.0.0.1:54911
+1677411586642	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "48245" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFggORA"
+Gtk-Message: 12:39:46.682: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:39:46.766: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:39:46.766: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411587495	Marionette	INFO	Marionette enabled
+1677411587500	Marionette	INFO	Listening on port 35115
+WebDriver BiDi listening on ws://localhost:48245
+Read port: 35115
+1677411587697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFggORA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48245/devtools/browser/bdf9d63c-0ac0-43d8-a689-b0015678c4c0
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/loadProviders.cf1f20501cfe76625567.js?cacheKey=1, line 1: Script terminated by timeout at:
+f@https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/loadProviders.cf1f20501cfe76625567.js?cacheKey=1:1:24972
+E/<@https://d3fw5vlhllyvee.cloudfront.net/mosaic-common/dist/loadProviders.cf1f20501cfe76625567.js?cacheKey=1:1:27128
+o@https://d3fw5vlhllyvee.cloudfront.net/m/s/1fc1066d8f4c029bf461/scripts/serpGlobal.js:2:93639
+42066/t.useLoadProvider/h</</</<@https://d3fw5vlhllyvee.cloudfront.net/m/s/1fc1066d8f4c029bf461/scripts/serpGlobal.js:2:93705
+42066/t.useLoadProvider/h</</<@https://d3fw5vlhllyvee.cloudfront.net/m/s/1fc1066d8f4c029bf461/scripts/serpGlobal.js:2:93591
+
+1677411685885	geckodriver	INFO	Listening on 127.0.0.1:45613
+1677411685895	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "41891" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOD4HaQ"
+Gtk-Message: 12:41:25.933: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:41:26.001: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:41:26.001: Failed to load module "window-decorations-gtk-module"
+1677411686533	Marionette	INFO	Stopped listening on port 35115
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411686637	Marionette	INFO	Marionette enabled
+1677411686643	Marionette	INFO	Listening on port 32947
+WebDriver BiDi listening on ws://localhost:41891
+Read port: 32947
+1677411686814	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOD4HaQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41891/devtools/browser/2e96d986-fa9f-41b8-946b-62c33b91a9ef
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411694560	Marionette	INFO	Stopped listening on port 32947
+1677411737290	geckodriver	INFO	Listening on 127.0.0.1:51911
+1677411737302	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "38499" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileyxehPN"
+Gtk-Message: 12:42:17.340: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:42:17.427: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:42:17.427: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411738170	Marionette	INFO	Marionette enabled
+1677411738176	Marionette	INFO	Listening on port 38653
+WebDriver BiDi listening on ws://localhost:38499
+Read port: 38653
+1677411738352	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyxehPN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:38499/devtools/browser/3be59e5e-76c7-4ce1-bc27-e4b7f434dbef
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript warning: https://d3fw5vlhllyvee.cloudfront.net/m/s/3c21b4dcef23243812f4/scripts/SerpMessageSnackbar.js, line 1: Script terminated by timeout at:
+@https://d3fw5vlhllyvee.cloudfront.net/m/s/3c21b4dcef23243812f4/scripts/SerpMessageSnackbar.js:1:55
+
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1677411754944	Marionette	INFO	Stopped listening on port 38653
+1677411755021	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+[2023-02-26T11:42:35Z ERROR glean] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "No such file or directory" })) }
+1677411950824	geckodriver	INFO	Listening on 127.0.0.1:55501
+1677411950835	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "55045" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqMsdox"
+Gtk-Message: 12:45:50.875: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:45:50.961: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:45:50.961: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411951715	Marionette	INFO	Marionette enabled
+1677411951721	Marionette	INFO	Listening on port 42855
+WebDriver BiDi listening on ws://localhost:55045
+Read port: 42855
+1677411951884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqMsdox/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55045/devtools/browser/680d0403-5aa2-4956-92e0-7b1991d78317
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411983870	geckodriver	INFO	Listening on 127.0.0.1:40047
+1677411983881	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "40175" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilefG6NcJ"
+Gtk-Message: 12:46:23.921: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:46:24.012: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:46:24.012: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677411984733	Marionette	INFO	Marionette enabled
+1677411984739	Marionette	INFO	Listening on port 44497
+WebDriver BiDi listening on ws://localhost:40175
+Read port: 44497
+1677411984916	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefG6NcJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40175/devtools/browser/ad857098-f2b0-436e-949c-990ea6a37d8f
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412060671	geckodriver	INFO	Listening on 127.0.0.1:51533
+1677412060682	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "59601" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0k25ru"
+Gtk-Message: 12:47:40.725: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:47:40.819: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:47:40.819: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412061578	Marionette	INFO	Marionette enabled
+1677412061584	Marionette	INFO	Listening on port 46161
+Read port: 46161
+WebDriver BiDi listening on ws://localhost:59601
+1677412061781	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0k25ru/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59601/devtools/browser/01788d34-8a51-4080-bb66-5b47a30fae8e
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412209356	geckodriver	INFO	Listening on 127.0.0.1:37333
+1677412209367	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "44599" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilerXjlNW"
+Gtk-Message: 12:50:09.410: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:50:09.496: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:50:09.496: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412210247	Marionette	INFO	Marionette enabled
+1677412210253	Marionette	INFO	Listening on port 43447
+WebDriver BiDi listening on ws://localhost:44599
+Read port: 43447
+1677412210413	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerXjlNW/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:44599/devtools/browser/92d1b190-3253-4992-9986-971796b72f2e
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412253693	geckodriver	INFO	Listening on 127.0.0.1:39163
+1677412253705	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "33689" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2Av5sM"
+Gtk-Message: 12:50:53.745: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:50:53.835: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:50:53.835: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412254563	Marionette	INFO	Marionette enabled
+1677412254569	Marionette	INFO	Listening on port 38201
+WebDriver BiDi listening on ws://localhost:33689
+Read port: 38201
+1677412254754	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2Av5sM/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:33689/devtools/browser/280411a4-83aa-4f20-9076-2352631dbb68
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412290354	geckodriver	INFO	Listening on 127.0.0.1:42105
+1677412290365	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "41403" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebUbLba"
+Gtk-Message: 12:51:30.404: Failed to load module "canberra-gtk-module"
+Gtk-Message: 12:51:30.502: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 12:51:30.502: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677412291294	Marionette	INFO	Marionette enabled
+1677412291300	Marionette	INFO	Listening on port 36535
+WebDriver BiDi listening on ws://localhost:41403
+Read port: 36535
+1677412291472	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebUbLba/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:41403/devtools/browser/c89cc07b-5422-4136-a63c-aabfb8e25580
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413335498	geckodriver	INFO	Listening on 127.0.0.1:34445
+1677413335510	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "56737" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOEZiMR"
+Gtk-Message: 13:08:55.553: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:08:55.644: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:08:55.645: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413336392	Marionette	INFO	Marionette enabled
+1677413336397	Marionette	INFO	Listening on port 44699
+WebDriver BiDi listening on ws://localhost:56737
+Read port: 44699
+1677413336559	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOEZiMR/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56737/devtools/browser/b378c4db-be43-4f6b-b2bf-1192c379e6b3
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+console.error: "Unable to find target with innerWindowId:6442450946"
+1677413440317	geckodriver	INFO	Listening on 127.0.0.1:51991
+1677413440334	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "35105" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecsPFHK"
+Gtk-Message: 13:10:40.383: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:10:40.477: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:10:40.478: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413441235	Marionette	INFO	Marionette enabled
+1677413441240	Marionette	INFO	Listening on port 38393
+WebDriver BiDi listening on ws://localhost:35105
+Read port: 38393
+1677413441418	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecsPFHK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:35105/devtools/browser/53f8928a-9612-4e0f-9caf-a189c980bf57
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1677413464406	geckodriver	INFO	Listening on 127.0.0.1:58365
+1677413464417	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "40573" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile1NbmSw"
+Gtk-Message: 13:11:04.462: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:11:04.546: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:11:04.546: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413465310	Marionette	INFO	Marionette enabled
+1677413465316	Marionette	INFO	Listening on port 42585
+Read port: 42585
+WebDriver BiDi listening on ws://localhost:40573
+1677413465486	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile1NbmSw/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40573/devtools/browser/039bd711-dab4-4b7a-a658-735e6f844149
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413533999	geckodriver	INFO	Listening on 127.0.0.1:55603
+1677413534011	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "53787" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileURPCBJ"
+Gtk-Message: 13:12:14.050: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:12:14.133: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:12:14.134: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413534938	Marionette	INFO	Marionette enabled
+1677413534945	Marionette	INFO	Listening on port 38461
+WebDriver BiDi listening on ws://localhost:53787
+Read port: 38461
+1677413535131	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileURPCBJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53787/devtools/browser/b240c1b3-7d39-435b-9ce6-47662ec9ec06
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1677413675609	geckodriver	INFO	Listening on 127.0.0.1:57299
+1677413675621	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "48545" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileN3FzcS"
+Gtk-Message: 13:14:35.659: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:14:35.741: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:14:35.741: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413676499	Marionette	INFO	Marionette enabled
+1677413676505	Marionette	INFO	Listening on port 46185
+WebDriver BiDi listening on ws://localhost:48545
+Read port: 46185
+1677413676674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileN3FzcS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:48545/devtools/browser/312ea223-6879-48de-abc6-d2bfd2a4efda
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413808988	geckodriver	INFO	Listening on 127.0.0.1:52805
+1677413808999	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "59371" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileqiSV0n"
+Gtk-Message: 13:16:49.041: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:16:49.130: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:16:49.130: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413809904	Marionette	INFO	Marionette enabled
+1677413809910	Marionette	INFO	Listening on port 41083
+WebDriver BiDi listening on ws://localhost:59371
+Read port: 41083
+1677413810088	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqiSV0n/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59371/devtools/browser/1c7c2008-fa60-4fe6-8e16-01ed732b0b01
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1677413883281	geckodriver	INFO	Listening on 127.0.0.1:44307
+1677413883292	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "40435" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileED1hPt"
+Gtk-Message: 13:18:03.332: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:18:03.417: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:18:03.417: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413884164	Marionette	INFO	Marionette enabled
+1677413884169	Marionette	INFO	Listening on port 39309
+WebDriver BiDi listening on ws://localhost:40435
+Read port: 39309
+1677413884344	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileED1hPt/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:40435/devtools/browser/d7b17fa6-0b24-4450-a572-bf01ed052db4
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+Corrupt JPEG data: bad Huffman code
+1677413948498	geckodriver	INFO	Listening on 127.0.0.1:51149
+1677413948509	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "36595" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3Th7O9"
+Gtk-Message: 13:19:08.551: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:19:08.653: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:19:08.653: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677413949339	Marionette	INFO	Marionette enabled
+1677413949345	Marionette	INFO	Listening on port 34747
+WebDriver BiDi listening on ws://localhost:36595
+Read port: 34747
+1677413949526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3Th7O9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36595/devtools/browser/74ed9716-b510-45f0-8842-2c5f5b2b3252
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414028164	geckodriver	INFO	Listening on 127.0.0.1:34925
+1677414028176	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "60573" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiler9IfJ6"
+Gtk-Message: 13:20:28.221: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:20:28.310: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:20:28.310: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414029074	Marionette	INFO	Marionette enabled
+1677414029078	Marionette	INFO	Listening on port 33293
+WebDriver BiDi listening on ws://localhost:60573
+Read port: 33293
+1677414029259	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiler9IfJ6/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60573/devtools/browser/608f34a3-6eab-4360-ab1c-7dd0d9c6b074
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414079674	geckodriver	INFO	Listening on 127.0.0.1:36787
+1677414079686	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "51395" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileiVFFy3"
+Gtk-Message: 13:21:19.729: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:21:19.817: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:21:19.818: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414080606	Marionette	INFO	Marionette enabled
+1677414080611	Marionette	INFO	Listening on port 33001
+WebDriver BiDi listening on ws://localhost:51395
+Read port: 33001
+1677414080788	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileiVFFy3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51395/devtools/browser/12fb77fc-90ab-41b5-9fdf-8c41e29bbf13
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414162717	geckodriver	INFO	Listening on 127.0.0.1:39479
+1677414162729	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "36591" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMSWcBu"
+Gtk-Message: 13:22:42.771: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:22:42.859: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:22:42.859: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414163597	Marionette	INFO	Marionette enabled
+1677414163602	Marionette	INFO	Listening on port 36183
+WebDriver BiDi listening on ws://localhost:36591
+Read port: 36183
+1677414163773	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMSWcBu/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:36591/devtools/browser/ee94b3a5-da1c-4b7e-8200-1f8cd572970b
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 596"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:596:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 596, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 596: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+1677414260121	geckodriver	INFO	Listening on 127.0.0.1:44263
+1677414260133	mozrunner::runner	INFO	Running command: "/home/deck/firefox-esr/firefox" "--marionette" "--remote-debugging-port" "56065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile58h4qc"
+Gtk-Message: 13:24:20.173: Failed to load module "canberra-gtk-module"
+Gtk-Message: 13:24:20.261: Failed to load module "colorreload-gtk-module"
+Gtk-Message: 13:24:20.261: Failed to load module "window-decorations-gtk-module"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1677414260999	Marionette	INFO	Marionette enabled
+1677414261005	Marionette	INFO	Listening on port 33139
+WebDriver BiDi listening on ws://localhost:56065
+Read port: 33139
+1677414261196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile58h4qc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56065/devtools/browser/ab7162d7-3107-43b3-aee5-033bccd2cf8c
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+SourceActor threw an exception: [Exception... "Failed to open input source 'file:///'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 699"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:699:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:545:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2121:35
+addAllSources@resource://devtools/server/actors/thread.js:1482:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:288:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 699, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 699: Failed to open input source 'file:///'
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 596"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:596:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 596, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 596: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
