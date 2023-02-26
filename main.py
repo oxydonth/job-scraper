@@ -181,6 +181,7 @@ def get_urls(baseurl, query, num_pages, location, portaltype):
 
 def grab_job_data_and_direct_apply_link_monster(url):
     data = {}
+    data["jobportal"] = "monster"
     data["url"] = url
     data["directapply"] = ""
     data["salary"] = ""
@@ -226,6 +227,7 @@ def grab_job_data_and_direct_apply_link_monster(url):
 
 def grab_job_data_and_direct_apply_link_indeed(url):
     data = {}
+    data["jobportal"] = "indeed"
     data["url"] = url
     data["directapply"] = ""
     data["salary"] = ""
