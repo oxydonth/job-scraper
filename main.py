@@ -116,6 +116,8 @@ def get_data(query, num_pages, location, radius, portaltype):
         baseurl = "https://www.indeed.de/jobs?q=" + str(query.replace(" ", "+")) + "&l=" + str(l) + "&radius=" + str(radius)
     elif (portaltype == "monster"):        
         baseurl = "https://www.monster.de/jobs/suche?q=" + str(query.replace(" ", "+")) + "&where=" + str(l) + "&radius=" + str(radius)
+    elif (portaltype == "linkedin"):        
+        baseurl = "https://www.monster.de/jobs/suche?q=" + str(query.replace(" ", "+")) + "&where=" + str(l) + "&radius=" + str(radius)        
     # Convert the queried title to Indeed format.
     postings_dict = {}
     urls = get_urls(baseurl, query, num_pages, location, portaltype)
@@ -124,7 +126,9 @@ def get_data(query, num_pages, location, radius, portaltype):
     for url in urls:
         try:
             if(portaltype == "monster"):
-                data.append(grab_job_data_and_direct_apply_link_monster(url))
+                urldata = grab_job_data_and_direct_apply_link_monster(url)
+                if (urldata != None):
+                    data.append(urldata)
             elif (portaltype == "indeed"):
                 data.append(grab_job_data_and_direct_apply_link_indeed(url))
         except:
@@ -223,7 +227,10 @@ def grab_job_data_and_direct_apply_link_monster(url):
             break
         i = i+1    
 
-    return data
+    if ("Home" in data["city"]):
+        return None
+    else:
+        return data
 
 def grab_job_data_and_direct_apply_link_indeed(url):
     data = {}
@@ -352,7 +359,7 @@ args = sys.argv
 for i, j in enumerate(args):
     if j == "-k": # file with the list of keywords that we search
         keywordfile = args[i+1]
-    elif j == "-l": # file with the list of locations
+    elif j == "-l": # file with the list of locationshttps://www.linkedin.com/jobs/search/?keywords=entwicklungsingenieur&location=Bielefeld
         locationfile = args[i+1]
     elif j == "-r": # radius for each location
         radius = int(args[i+1])
@@ -415,6 +422,7 @@ os.chdir(pathname)
 
 # Check if the output file directory exists. If not, make it.
 if not os.path.isdir("output/indeed"):
+
     os.mkdir("output/indeed")
 
 # Same for the cleaned contentecho
@@ -435,5 +443,5 @@ with open("output/indeed/cities.csv", "w") as csvfile:
         for kw in keywords: # For each keyword
             csvwriter = csv.writer(csvfile)
             removealert() # Check for jobalert to remove.                        
-            get_data(kw, limit, l, radius, "monster")
+            #get_data(kw, limit, l, radius, "monster")
             get_data(kw, limit, l, radius, "indeed")
