@@ -225,9 +225,9 @@ def grab_job_data_and_direct_apply_link_monster(url):
             data["city"] = clean_city_of_plz(contractduration.get_text())
         if (i > 2):
             break
-        i = i+1    
+        i = i+1
 
-    if ("Home" in data["city"]):
+    if ("Home" in data["city"] or data["jobopeningdate"] > 7):
         return None
     else:
         return data
