@@ -279,7 +279,7 @@ def grab_job_data_and_direct_apply_link_indeed(url):
             citydiv = citydivs.findAll("div", {"class": ""})
             data["city"] = clean_city_of_plz(citydiv[3].get_text())                
 
-    if ("Home" in data["city"] or data["jobopeningdate"] > 7):
+    if ("Home" in data["city"]):
         return None
     else:
         return data
